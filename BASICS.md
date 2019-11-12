@@ -30,3 +30,4 @@ int main() {
     cout << "\n";
 }
 ```
+This prints `00`.
