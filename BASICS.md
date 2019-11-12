@@ -18,3 +18,15 @@
     vector<vector<int>> v {{1,2}, {3,4}};
 ...
 ```
+
+### vector access fails silently
+Exception handling should be explicit?
+```c++
+int main() {
+    vector<int> a = {0, 1, 2, 3, 4};
+    // Add some code here to access and print elements of a.
+    cout << a[0];
+    cout << a[10];
+    cout << "\n";
+}
+```
