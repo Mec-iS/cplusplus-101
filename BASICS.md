@@ -31,3 +31,16 @@ int main() {
 }
 ```
 This prints `00`.
+
+### iterate over containers
+```c++
+    vector<int> a {1, 2, 3, 4, 5};
+    for (int i: a) {
+        cout << i << "\n";
+    }
+```
+
+### accumulate vector's element
+```c++
+    return std::accumulate(v.begin(), v.end(), 0);
+```
