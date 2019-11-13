@@ -40,7 +40,71 @@ This prints `00`.
     }
 ```
 
-### accumulate vector's element
+### accumulate vector's elements
 ```c++
     return std::accumulate(v.begin(), v.end(), 0);
+```
+
+### open a file into a stream (buffer)
+```c++
+#include <fstream>
+#include <iostream>
+#include <string>
+
+int main() {
+    std::ifstream my_file;
+    my_file.open("files/1.board");
+    if (my_file.is_open()) {
+        std::cout << "The file stream has been created!" << "\n";
+        std::string line;
+        while (getline(my_file, line)) {
+            std::cout << line << "\n";
+        }
+    }
+}
+```
+
+### process a string into a stream
+```c++
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using std::istringstream;
+using std::string;
+using std::cout;
+
+int main() 
+{
+    string a("1 2 3");
+
+    istringstream my_stream(a);
+
+    int n;
+    
+    // Testing to see if the stream was successful and printing results.
+    while (my_stream) {
+        my_stream >> n;
+        if (my_stream) {
+            cout << "That stream was successful: " << n << "\n";
+        }
+        else {
+            cout << "That stream was NOT successful!" << "\n";            
+        }
+    }
+}
+```
+
+### use enums in switch
+```c++
+enum class BoardEnum {kEmpty, kObstacle};
+
+string CellString(BoardEnum state) {
+  string s;
+  switch (state) {
+    case BoardEnum::kObstacle : s = "⛰️   ";
+    default: s = "0   ";  
+  }
+  return s;
+}
 ```
