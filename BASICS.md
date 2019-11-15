@@ -128,5 +128,11 @@ int* pointer_to_a = &a;  // int* is the type of a pointer
 cout << *pointer_to_a  // print the value
 ```
 
+### print variable types
+```c++
+in a = 5;
+cout << typeid(a).name();
+```
+
 
 
