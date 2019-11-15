@@ -108,3 +108,25 @@ string CellString(BoardEnum state) {
   return s;
 }
 ```
+
+### addresses and pointers
+`&` and `*` operations provide different functionalities depending if they are left or right to the assigment:
+```c++
+// define a variable
+int a = 5;
+
+// create a reference (alias)
+auto &b = a;  // b reference to the value of a
+
+// handle the address
+auto addr = &a;  // addr is the memory address
+
+// A pointer to a is declared and initialized to the address of a.
+int* pointer_to_a = &a;  // int* is the type of a pointer
+
+// retrieve the value of a pointer
+cout << *pointer_to_a  // print the value
+```
+
+
+
