@@ -1,4 +1,6 @@
-# References adn Pointers
+# References and Pointers
+
+## Use of pointers
 
 ### populate null-pointers
 ```c++
