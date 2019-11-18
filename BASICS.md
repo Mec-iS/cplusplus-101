@@ -134,5 +134,26 @@ in a = 5;
 cout << typeid(a).name();
 ```
 
+### simple hash map
+```c++
+#include <unordered_map>
+#include <string>
+#include <iostream>
+using std::unordered_map;
+using std::string;
+using std::cout;
 
+int main() {
+    unordered_map<int, string> codes = {{213, "Algeria"}, {376, "Andorra"}, {244, "Angola"}, {54, "Argentina"}, {374, "Armenia"}, {297, "Aruba"}};
+    
+    if (codes.find(960) == codes.end()) {
+	    cout << "960 is not a key in the map";
+    }
+    std::pair<int, string> new_value (960, "Maldives");
+    codes.insert(new_value);
+    
+    auto got = codes.find(960);
+    cout << got->first << " is " << got->second; 
+}
+```
 
